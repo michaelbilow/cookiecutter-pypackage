@@ -70,9 +70,10 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
     $ cd {{ cookiecutter.project_slug }}/
     $ python setup.py develop
 
-4. Create a branch for local development::
+4. Create a branch for local development and install pre-commit hooks using pre-commit_::
 
     $ git checkout -b name-of-your-bugfix-or-feature
+    $ pre-commit install
 
    Now you can make your changes locally.
 
@@ -102,7 +103,7 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
+3. The pull request should work for Python 3.5, 3.6, and 3.7. Check
    https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
@@ -129,3 +130,5 @@ $ git push
 $ git push --tags
 
 Travis will then deploy to PyPI if tests pass.
+
+  .. pre-commit_: https://pre-commit.com/
